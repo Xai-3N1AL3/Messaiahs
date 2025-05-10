@@ -1,0 +1,121 @@
+/* === MENU MANAGEMENT STYLING BASED ON DESIGN === */
+
+.menu-container {
+  font-family: 'Kadwa', serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.menu-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.menu-tabs {
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.menu-tab-buttons {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #000;
+}
+
+.menu-tab-buttons button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  color: #000;
+}
+
+.menu-tab-buttons .active {
+  background-color: #F4C838;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  justify-content: flex-start;
+}
+
+.menu-card {
+  background-color: #FCD875;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.menu-info {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.menu-info h4 {
+  font-weight: bold;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.menu-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.menu-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.status-btn {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+}
+
+.status-btn.active {
+  background-color: #0FA639;
+}
+
+.status-btn.inactive {
+  background-color: #D50000;
+}
+
+.icon-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btns button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000;
+}

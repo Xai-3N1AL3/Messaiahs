@@ -1,0 +1,96 @@
+/* Sidebar */
+.sidebar {
+  background-color: #d6a72b;
+  color: #000;
+  padding: 20px;
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  color: #000;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+  background-color: #fef3c7;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  background-color: #fff;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+/* Report Card */
+.report-card {
+  background-color: #facc15;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  transition: 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #fef3c7;
+}
+
+.tab-btn.active {
+  background-color: #d1d5db;
+}
+
+/* Chart Container */
+.chart-container {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
