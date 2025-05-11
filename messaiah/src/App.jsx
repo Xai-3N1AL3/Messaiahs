@@ -6,7 +6,6 @@ import SalesReport from './pages/salesreport/SalesReportPage';
 import MenuManagement from './pages/menu/MenuManagementPage';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 
 function App() {
   return (
