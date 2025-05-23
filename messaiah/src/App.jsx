@@ -1,30 +1,23 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
 import Dashboard from './pages/dashboard/Dashboard';
-import Settings from './pages/settings/SettingsPage';
-import SalesReport from './pages/salesreport/SalesReportPage';
 import MenuManagement from './pages/menu/MenuManagementPage';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import SalesReports from './pages/salesreport/SalesReportPage';
+import SettingsPage from './pages/settings/SettingsPage';
 
 function App() {
   return (
-    <div className="app-container">
+    <Router>
       <Routes>
-        {/* Redirect from / to /dashboard */}
-        <Route path="/" element={<Navigate to="/dashboard" />} />
-
-        {/* Main routes */}
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/menu" element={<MenuManagement />} />
-        <Route path="/salesreport" element={<SalesReport />} />
-        <Route path="/settings" element={<Settings />} />
-
-
-        {/* 404 fallback route */}
-        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+        <Route path="/" element={<Sidebar/>}> {/* Shared sidebar */}
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="menu" element={<MenuManagement />} />
+          <Route path="salesreport" element={<SalesReports />} />
+          <Route path="settings" element={<SettingsPage />} />
+        </Route>
       </Routes>
-    </div>
+    </Router>
   );
 }
 

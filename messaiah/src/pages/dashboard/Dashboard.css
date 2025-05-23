@@ -1,8 +1,8 @@
 /* Base Styles */
-body, html {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: 'Kadwa', sans-serif;
 }
 
@@ -10,7 +10,16 @@ body, html {
 .container-fluid {
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background-color: #fff;
+}
+
+/* Row inside container */
+.container-fluid > .row {
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
 }
 
 /* Sidebar Styles */
@@ -21,6 +30,8 @@ body, html {
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .logo {
@@ -58,12 +69,45 @@ body, html {
 }
 
 /* Main Content Styles */
-.main-content {
-  flex: 1;
+.col-12.col-md-9.col-lg-10.ps-md-0 {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  height: 100vh;
+  overflow: hidden;
+  padding-left: 0;
+}
+
+.topbar {
+  height: 56px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
   background-color: #fff;
+  gap: 1rem;
+}
+
+.topbar .btn {
+  position: relative;
+}
+
+.topbar .btn .badge {
+  position: absolute;
+  top: 0;
+  start: 100%;
+  transform: translate(50%, -50%);
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+/* Main scrollable content fills remaining space */
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 1.5rem 1rem;
 }
 
 .page-title {
@@ -93,6 +137,8 @@ body, html {
 
 .card-body {
   padding: 1rem;
+  height: 100%;
+  overflow: auto;
 }
 
 /* Table Styles */
@@ -107,6 +153,7 @@ body, html {
   position: sticky;
   top: 0;
   white-space: nowrap;
+  z-index: 1;
 }
 
 .table td, .table th {
@@ -196,15 +243,33 @@ body, html {
 @media (max-width: 767.98px) {
   .container-fluid {
     flex-direction: column;
+    height: auto;
   }
   
+  .container-fluid > .row {
+    flex-direction: column;
+    height: auto;
+  }
+
   .sidebar {
     width: 100%;
     height: auto;
+    box-shadow: none;
   }
   
+  .col-12.col-md-9.col-lg-10.ps-md-0 {
+    height: auto;
+  }
+  
+  .topbar {
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
   .main-content {
     height: auto;
+    overflow: visible;
+    padding: 1rem;
   }
   
   .card {

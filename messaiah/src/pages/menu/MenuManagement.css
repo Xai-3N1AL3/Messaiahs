@@ -1,121 +1,131 @@
-/* === MENU MANAGEMENT STYLING BASED ON DESIGN === */
+.topbar {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3.5rem;
+  background-color: #facc15;
+  z-index: 1050;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-.menu-container {
-  font-family: 'Kadwa', serif;
-  background-color: #ffffff;
-  min-height: 100vh;
-  padding: 2rem;
+
+.main-content {
+  padding-left: 1.5rem;  /* matches px-4 approx */
+  padding-right: 1.5rem;
+  padding-top: 1rem; /* space below sticky topbar */
 }
 
 .menu-header {
-  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
 }
 
 .menu-tabs {
-  background-color: #D9D9D9;
-  border-radius: 20px;
-  padding: 1rem;
-}
-
-.menu-tab-buttons {
-  display: flex;
-  gap: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid #000;
+  margin-bottom: 1.5rem;
 }
 
 .menu-tab-buttons button {
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  padding: 0.375rem 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
   cursor: pointer;
-  padding: 0.4rem 0.8rem;
-  border-radius: 10px;
-  color: #000;
+  border-radius: 0.25rem;
+  margin-left: 1rem;
 }
 
-.menu-tab-buttons .active {
-  background-color: #F4C838;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+.menu-tab-buttons button.active {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+  margin-left: 1rem;
 }
 
 .menu-items {
   display: flex;
-  gap: 1.25rem;
   flex-wrap: wrap;
-  padding-top: 1rem;
-  justify-content: flex-start;
+  gap: 1rem;
+  margin-left: 1rem;
 }
 
 .menu-card {
-  background-color: #FCD875;
-  border-radius: 10px;
-  width: 220px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  width: calc(33.333% - 1rem);
+  background: #fff;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   overflow: hidden;
-  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-card img {
   width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .menu-info {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  flex-grow: 1;
 }
 
 .menu-info h4 {
-  font-weight: bold;
-  margin: 0.5rem 0 0.25rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .menu-info p {
   margin: 0;
-  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .menu-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.75rem;
-  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 1rem 1rem;
 }
 
 .status-btn {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 6px;
-  font-weight: bold;
   border: none;
-  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  cursor: default;
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
 }
 
 .status-btn.active {
-  background-color: #0FA639;
+  background-color: #28a745;
+  color: white;
 }
 
 .status-btn.inactive {
-  background-color: #D50000;
-}
-
-.icon-btns {
-  display: flex;
-  gap: 0.5rem;
+  background-color: #dc3545;
+  color: white;
 }
 
 .icon-btns button {
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
-  font-size: 1rem;
+  color: #495057;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+.icon-btns button:hover {
   color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .menu-card {
+    width: 100%;
+  }
+    .topbar {
+    justify-content: space-between;
+  }
 }
