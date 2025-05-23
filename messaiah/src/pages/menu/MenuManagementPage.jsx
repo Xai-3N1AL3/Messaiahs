@@ -84,14 +84,14 @@ const MenuManagement = () => {
     <div className="container-fluid p-0">
       <div className="row g-0">
         {/* Main Content */}
-        <div className="col-12 col-md-9 col-lg-10 ps-md-0 pt-0 px-0 main-content">
+        <div className="col-12 col-md-9 col-lg-10 p-0 main-content">
           {/* Topbar */}
           <nav className="topbar d-flex justify-content-end align-items-center px-3">
             <div className="d-flex align-items-center gap-3">
               <button type="button" className="btn btn-outline-dark position-relative">
                 <i className="bi bi-bell"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  3
+                  
                   <span className="visually-hidden">unread messages</span>
                 </span>
               </button>

@@ -6,7 +6,9 @@ const Sidebar = ({ collapsed }) => {
   return (
     <div className="sidebar-layout">
       <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-        <h2 className="brand">📊 Messiah's Admin</h2>
+        <h2 className="brand">
+          <img src="./src/assets/logo.png" alt="Messiah's Admin" className="brand-logo" />
+        </h2>
         <nav>
           <ul>
             <li>

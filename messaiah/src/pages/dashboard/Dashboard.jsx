@@ -47,7 +47,7 @@ const Dashboard = () => {
           <button type="button" className="btn btn-outline-dark position-relative">
             <i className="bi bi-bell"></i>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              3
+
               <span className="visually-hidden">unread messages</span>
             </span>
           </button>
@@ -59,10 +59,10 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <div className="p-4 main-content">
-        <h2 className="page-title mb-4">Dashboard Overview</h2>
+        <h2 className="page-title mb-4 mx-3">Dashboard Overview</h2>
 
         {/* Cards */}
-        <div className="row mb-4 g-3">
+        <div className="row mb-4 g-3 mx-3 justify-content-center">
           <div className="col-md-4">
             <div className="card bg-warning text-dark p-3 h-100">
               <h3>Total Revenue</h3>

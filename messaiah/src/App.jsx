@@ -9,7 +9,8 @@ import SettingsPage from './pages/settings/SettingsPage';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Sidebar />}>
+      <Route path="/" element={<Sidebar/>}>
+      <Route index element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="menu" element={<MenuManagement />} />
         <Route path="salesreport" element={<SalesReports />} />

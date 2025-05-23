@@ -29,7 +29,6 @@ const SalesReportPage = () => {
           <button type="button" className="btn btn-outline-dark position-relative">
             <i className="bi bi-bell"></i>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              2
               <span className="visually-hidden">unread alerts</span>
             </span>
           </button>
@@ -41,9 +40,9 @@ const SalesReportPage = () => {
 
       {/* Main Content */}
       <main className="main-content flex-grow-1 px-4 py-3 overflow-auto">
-        <h2 className="page-title">Sales Report</h2>
+        <h2 className="page-title mx-3">Sales Report</h2>
 
-        <div className="report-card">
+        <div className="report-card px-3">
           <div className="tab-buttons">
             {['Daily', 'Weekly', 'Monthly', 'Custom/filter'].map(tab => (
               <button
@@ -60,7 +59,7 @@ const SalesReportPage = () => {
               <LineChart data={sampleData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="day" label={{ value: 'Day', position: 'insideBottomRight', offset: -5 }} />
-                <YAxis label={{ value: 'Sales ($)', angle: -90, position: 'insideLeft' }} />
+                <YAxis label={{ value: 'Sales', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
                 <Line type="monotone" dataKey="sales" stroke="#8884d8" strokeWidth={2} />
               </LineChart>

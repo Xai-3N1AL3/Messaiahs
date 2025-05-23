@@ -8,7 +8,7 @@ const SettingsPage = () => {
 
   return (
     <>
-      <h2 className="page-title">Settings</h2>
+      <h2 className="page-title mx-3">Settings</h2>
       <div className="card bg-warning">
         <div className="card-body">
           <div className="tab-buttons mb-3 d-flex justify-content-center gap-3">
