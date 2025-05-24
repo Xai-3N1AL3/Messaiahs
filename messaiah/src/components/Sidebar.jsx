@@ -1,29 +1,45 @@
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
+import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ collapsed }) => {
   return (
-    <div className="sidebar bg-warning">
-      <div className="p-3">
-        <h1 className="logo">☕ Messiah's Admin</h1>
+    <div className="sidebar-layout">
+      <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
+        <h2 className="brand">
+          <img src="./src/assets/logo.png" alt="Messiah's Admin" className="brand-logo" />
+        </h2>
         <nav>
-          <ul className="nav flex-column">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">📋 Dashboard</Link>
+          <ul>
+            <li>
+              <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>
+                📋 Dashboard
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link to="/settings" className="nav-link">⚙️ Settings</Link>
+            <li>
+              <NavLink to="/menu" className={({ isActive }) => isActive ? 'active' : ''}>
+                📁 Menu Management
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link to="/menu" className="nav-link">🍽️ Menu Management</Link>
+            <li>
+              <NavLink to="/salesreport" className={({ isActive }) => isActive ? 'active' : ''}>
+                📊 Sales Reports
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link to="/salesreport" className="nav-link">📊 Sales Reports</Link>
+            <li>
+              <NavLink to="/settings" className={({ isActive }) => isActive ? 'active' : ''}>
+                ⚙️ Settings
+              </NavLink>
             </li>
           </ul>
         </nav>
       </div>
-    </div>
-  )
-}
 
-export default Sidebar
+      <div className="main-content">
+        <Outlet />
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;
