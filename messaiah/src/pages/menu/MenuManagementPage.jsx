@@ -7,19 +7,19 @@ import './MenuManagement.css';
 const categories = ['All Items', 'Chaopan', 'Snacks', 'Bilao', 'Platter', 'Sandwich'];
 
 const initialMenuItems = [
-  { id: 1, name: 'Ube Turon', price: 183, image: 'src/assets/image copy 2.png', available: true, category: 'Snacks' },
-  { id: 2, name: 'Cheesesticks', price: 78, image: 'src/assets/image copy.png', available: true, category: 'Snacks' },
-  { id: 3, name: 'Chicken Sisig', price: 123, image: 'src/assets/image copy 3.png', available: false, category: 'Chaopan' },
-  { id: 4, name: 'CCB - Chaopan Cordon Blue', price: 122, image: 'src/assets/image.png', available: true, category: 'Chaopan' },
-  { id: 5, name: 'Lechon Kawali', price: 102, image: 'src/assets/image copy 4.png', available: false, category: 'Chaopan' },
-  { id: 6, name: 'Sandwich', price: 129, image: 'src/assets/image copy 6.png', available: true, category: 'Sandwich' },
-  { id: 7, name: 'Bilao', price: 135, image: 'src/assets/bilao1.jpg', available: false, category: 'Bilao' },
-  { id: 8, name: 'Baked Mac', price: 174, image: 'src/assets/image copy 7.png', available: false, category: 'Platter' },
-  { id: 9, name: 'Cordon', price: 148, image: 'src/assets/cordon.jpg', available: false, category: 'Chaopan' },
-  { id: 10, name: 'Lasagna', price: 165, image: 'src/assets/lasagna.jpg', available: true, category: 'Platter' },
-  { id: 11, name: 'Palabok', price: 105, image: 'src/assets/palabok.jpg', available: true, category: 'Bilao' },
-  { id: 12, name: 'Fries', price: 75, image: 'src/assets/snack1.jpg', available: false, category: 'Snacks' },
-  { id: 13, name: 'Platter-Wings', price: 138, image: 'src/assets/platterwings.jpg', available: true, category: 'Platter' },
+  { id: 1, name: 'Ube Turon', price: 183, image: 'public/assets/image copy 2.png', available: true, category: 'Snacks' },
+  { id: 2, name: 'Cheesesticks', price: 78, image: 'public/assets/image copy.png', available: true, category: 'Snacks' },
+  { id: 3, name: 'Chicken Sisig', price: 123, image: 'public/assets/image copy 3.png', available: false, category: 'Chaopan' },
+  { id: 4, name: 'CCB - Chaopan Cordon Blue', price: 122, image: 'public/assets/image.png', available: true, category: 'Chaopan' },
+  { id: 5, name: 'Lechon Kawali', price: 102, image: 'public/assets/image copy 4.png', available: false, category: 'Chaopan' },
+  { id: 6, name: 'Sandwich', price: 129, image: 'public/assets/image copy 6.png', available: true, category: 'Sandwich' },
+  { id: 7, name: 'Bilao', price: 135, image: 'public/assets/bilao1.jpg', available: false, category: 'Bilao' },
+  { id: 8, name: 'Baked Mac', price: 174, image: 'public/assets/image copy 7.png', available: false, category: 'Platter' },
+  { id: 9, name: 'Cordon', price: 148, image: 'public/assets/cordon.jpg', available: false, category: 'Chaopan' },
+  { id: 10, name: 'Lasagna', price: 165, image: 'public/assets/lasagna.jpg', available: true, category: 'Platter' },
+  { id: 11, name: 'Palabok', price: 105, image: 'public/assets/palabok.jpg', available: true, category: 'Bilao' },
+  { id: 12, name: 'Fries', price: 75, image: 'public/assets/snack1.jpg', available: false, category: 'Snacks' },
+  { id: 13, name: 'Platter-Wings', price: 138, image: 'public/assets/platterwings.jpg', available: true, category: 'Platter' },
 ];
 
 const MenuManagement = () => {
