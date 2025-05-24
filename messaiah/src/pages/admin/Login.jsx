@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import logo from '../../assets/logo.png';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ const Login = () => {
     <div className="login-wrapper">
       <div className="login-header">Messiah's Admin Panel</div>
       <div className="login-box">
-        <img src={logo} alt="Messiah Cafe Logo" className="login-logo" />
+        <img src="/assets/logo.png" alt="Messiah Cafe Logo" className="login-logo" />
         <input
           type="text"
           placeholder="Username"
