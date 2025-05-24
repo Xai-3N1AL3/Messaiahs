@@ -1,0 +1,205 @@
+/* Base Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Kadwa', sans-serif;
+  background-color: #fff;
+}
+
+/* Container */
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Row */
+.row.g-0 {
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #d6a72b;
+  color: #000;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+  padding: 20px 10px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  color: #000;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  display: block;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+  background-color: #fef3c7;
+  font-weight: bold;
+}
+
+/* Main Content Wrapper */
+.col-12.col-md-9.col-lg-10 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Topbar */
+.topbar {
+  height: 56px;
+  background-color: #fef3c7;  /* pale yellow matching your sidebar highlight */
+  border-bottom: 1px solid #facc15; /* subtle border with sidebar yellow */
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.topbar .btn {
+  position: relative;
+}
+
+/* Notification Badge */
+.topbar .btn .badge {
+  font-size: 0.6rem;
+  padding: 0.3em 0.4em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* Hamburger Button (for small screens) */
+.topbar .btn.btn-light.d-md-none {
+  font-size: 1.25rem;
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+/* Card */
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border: none;
+  max-width: 1000px; /* Set a max width */
+  width: 100%;       /* Responsive */
+  height: auto;      /* Let height adjust to content */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;    /* Center it horizontally */
+}
+
+.card.bg-warning {
+  background-color: #facc15;
+  color: #000;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+  color: #000;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background-color: #fef9c3;
+}
+
+.tab-button.active {
+  background-color: #e5e7eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .sidebar {
+    width: 60px;
+    padding: 20px 10px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
