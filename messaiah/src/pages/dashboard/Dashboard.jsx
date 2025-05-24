@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './Dashboard.css';
@@ -13,6 +14,7 @@ const orders = [
 
 const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(window.innerWidth < 768);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => setCollapsed(window.innerWidth < 768);
@@ -21,7 +23,8 @@ const Dashboard = () => {
   }, []);
 
   const handleLogout = () => {
-    alert('Logged out!');
+    navigate ('/');
+    alert('LOGGED OUT!');
   };
 
   const getStatusBadgeClass = (status) => {
@@ -38,12 +41,6 @@ const Dashboard = () => {
       {/* Topbar */}
       <div className="topbar d-flex justify-content-end align-items-center px-3">
         <div className="d-flex align-items-center gap-3">
-          <button
-            className="btn btn-light btn-sm d-md-none me-3"
-            onClick={() => setCollapsed(!collapsed)}
-          >
-            <i className="bi bi-list"></i>
-          </button>
           <button type="button" className="btn btn-outline-dark position-relative">
             <i className="bi bi-bell"></i>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -52,7 +49,7 @@ const Dashboard = () => {
             </span>
           </button>
           <button type="button" className="btn btn-outline-dark" onClick={handleLogout}>
-            Logout
+            Logout        
           </button>
         </div>
       </div>

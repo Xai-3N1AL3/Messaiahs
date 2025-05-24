@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer
 } from 'recharts';
@@ -16,8 +17,10 @@ const sampleData = [
 
 const SalesReportPage = () => {
   const [activeTab, setActiveTab] = useState('Weekly');
+  const navigate = useNavigate();
 
   const handleLogout = () => {
+    navigate ('/');
     alert('Logged out!');
   };
 
@@ -32,9 +35,9 @@ const SalesReportPage = () => {
               <span className="visually-hidden">unread alerts</span>
             </span>
           </button>
-          <button type="button" className="btn btn-outline-dark" onClick={handleLogout}>
-            Logout
-          </button>
+              <button type="button" className="btn btn-outline-dark" onClick={handleLogout}>
+                Logout
+              </button>
         </div>
       </div>
 
