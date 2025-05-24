@@ -7,20 +7,21 @@ import './MenuManagement.css';
 const categories = ['All Items', 'Chaopan', 'Snacks', 'Bilao', 'Platter', 'Sandwich'];
 
 const initialMenuItems = [
-  { id: 1, name: 'Ube Turon', price: 183, image: '/assets/image copy 2.png', available: true, category: 'Snacks' },
-  { id: 2, name: 'Cheesesticks', price: 78, image: '/assets/image copy.png', available: true, category: 'Snacks' },
-  { id: 3, name: 'Chicken Sisig', price: 123, image: '/assets/image copy 3.png', available: false, category: 'Chaopan' },
+  { id: 1, name: 'Ube Turon', price: 183, image: '/assets/image-copy-2.png', available: true, category: 'Snacks' },
+  { id: 2, name: 'Cheesesticks', price: 78, image: '/assets/image-copy.png', available: true, category: 'Snacks' },
+  { id: 3, name: 'Chicken Sisig', price: 123, image: '/assets/image-copy-3.png', available: false, category: 'Chaopan' },
   { id: 4, name: 'CCB - Chaopan Cordon Blue', price: 122, image: '/assets/image.png', available: true, category: 'Chaopan' },
-  { id: 5, name: 'Lechon Kawali', price: 102, image: '/assets/image copy 4.png', available: false, category: 'Chaopan' },
-  { id: 6, name: 'Sandwich', price: 129, image: '/assets/image copy 6.png', available: true, category: 'Sandwich' },
+  { id: 5, name: 'Lechon Kawali', price: 102, image: '/assets/image-copy-4.png', available: false, category: 'Chaopan' },
+  { id: 6, name: 'Sandwich', price: 129, image: '/assets/image-copy-6.png', available: true, category: 'Sandwich' },
   { id: 7, name: 'Bilao', price: 135, image: '/assets/bilao1.jpg', available: false, category: 'Bilao' },
-  { id: 8, name: 'Baked Mac', price: 174, image: '/assets/image copy 7.png', available: false, category: 'Platter' },
+  { id: 8, name: 'Baked Mac', price: 174, image: '/assets/image-copy-7.png', available: false, category: 'Platter' },
   { id: 9, name: 'Cordon', price: 148, image: '/assets/cordon.jpg', available: false, category: 'Chaopan' },
   { id: 10, name: 'Lasagna', price: 165, image: '/assets/lasagna.jpg', available: true, category: 'Platter' },
   { id: 11, name: 'Palabok', price: 105, image: '/assets/palabok.jpg', available: true, category: 'Bilao' },
   { id: 12, name: 'Fries', price: 75, image: '/assets/snack1.jpg', available: false, category: 'Snacks' },
   { id: 13, name: 'Platter-Wings', price: 138, image: '/assets/platterwings.jpg', available: true, category: 'Platter' },
 ];
+
 
 const MenuManagement = () => {
   const [collapsed, setCollapsed] = useState(window.innerWidth < 768);
